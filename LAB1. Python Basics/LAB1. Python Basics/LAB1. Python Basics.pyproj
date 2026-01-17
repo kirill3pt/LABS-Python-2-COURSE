@@ -31,6 +31,11 @@
     <Compile Include="task3.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="task6.py" />
+    <Compile Include="task5.py" />
+    <Compile Include="task4.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
