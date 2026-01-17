@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>492a32a7-ec72-4992-b946-bfb821cc3208</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LAB1._Python_Basics.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LAB1._Python_Basics.py" />
+    <Compile Include="main.py" />
+    <Compile Include="task1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="task2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="task3.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
