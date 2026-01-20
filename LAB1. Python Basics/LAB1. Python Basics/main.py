@@ -11,6 +11,8 @@ def main():
         print("2 - проверка на возрастание")
         print("3 - номер карты")
         print("4 - разделение по словам")
+        print("5 - приведение слов к верхнему регистру")
+        print("6 - вывод символов, встречающихся 1 раз")
         print("0 - выход")
         choice = input("Введите номер задания: ")
         if choice == "1":
@@ -24,6 +26,10 @@ def main():
             task3.numbers()
         elif choice == "4":
             task4.splits()
+        elif choice == "5":
+            task5.upperReg()
+        elif choice == "6":
+            task6.onceSymbol()
         elif choice == "0":
             break
         else:
