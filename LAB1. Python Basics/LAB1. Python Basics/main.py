@@ -1,9 +1,11 @@
-﻿import task1
+﻿import array
+import task1
 import task2
 import task3
 import task4
 import task5
 import task6
+import task7
 
 def main():
     while True:
@@ -30,6 +32,8 @@ def main():
             task5.upperReg()
         elif choice == "6":
             task6.onceSymbol()
+        elif choice == "7":
+            task7.practise()
         elif choice == "0":
             break
         else:
