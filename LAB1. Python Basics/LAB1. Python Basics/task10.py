@@ -15,4 +15,4 @@
     for char in password:  #проверка наличия знаков препинания в строке
         if char in "!?,.:;'":
             countSecurity += 1
-    print("Степень защищенности пароля: {}".format(countSecurity))
+    print("Степень защищенности пароля: {}/3".format(countSecurity))
