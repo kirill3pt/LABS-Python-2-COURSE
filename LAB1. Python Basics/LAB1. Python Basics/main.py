@@ -1,4 +1,5 @@
 ﻿#импорт файлов с реализацией заданий лабораторной работы. main необходим для соединения воедино всех файлов
+from struct import pack
 import task1
 import task2
 import task3
@@ -8,10 +9,13 @@ import task6
 import task7
 import task8
 import task9
+import task10
+import task11
 
 #функция вызова скриптов
 def main():
     while True:
+        print("----------------------------------")
         print("1 - перевод в деньги")
         print("2 - проверка на возрастание")
         print("3 - номер карты")
@@ -21,7 +25,10 @@ def main():
         print("7 - проверка строк-адресов")
         print("8 - генерация n от 1 до 10000")
         print("9 - имитация работы банкомата")
+        print("10 - проверка надежности пароля")
+        print("11 - frange генератор")
         print("0 - выход")
+        print("----------------------------------")
         choice = input("Введите номер задания: ")
         if choice == "1":
             task1.convertToMoney()
@@ -44,6 +51,12 @@ def main():
             task8.generate()
         elif choice == "9":
             task9.cash()
+        elif choice == "10":
+            task10.algo()
+        elif choice == "11":
+            check = task11.frange(1, 5, 0.1)
+            for x in check:
+                print(round(x, 1)) #округление сделано для того чтобы не было проблем в выводе: 1,10000001 и т.д...
         elif choice == "0":
             break
         else:
