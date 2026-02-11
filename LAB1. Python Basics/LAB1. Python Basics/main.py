@@ -12,6 +12,9 @@ import task10
 import task11
 import task12
 import task13
+import task14
+import task15
+import task16
 
 #функция вызова скриптов
 def main():
@@ -30,6 +33,9 @@ def main():
         print("11 - frange генератор")
         print("12 - get_frames генератор")
         print("13 - extra_enumerate генератор")
+        print("14 - @non_empty декоратор")
+        print("15 - @pre_process декоратор")
+        print("16 - Лига чемпионов")
         print("0 - выход")
         print("----------------------------------")
         choice = input("Введите номер задания: ")
@@ -70,6 +76,13 @@ def main():
             extr = task13.extra_enumerate(x)
             for i, elem, cum, frac in extr:
                 print("{}, {}, {}".format(elem, cum, round(frac, 2))) #округление идёт по той же причине, что и в №11
+        elif choice == "14":
+            print(task14.get_pages())
+        elif choice == "15":
+            s = [1.0, 2.0, 3.0, 4.0]
+            print(task15.plot_signal(s))
+        elif choice == "16": 
+            task16.UEFA_Champions_League()
         elif choice == "0":
             break
         else:
