@@ -1,5 +1,4 @@
 ﻿#импорт файлов с реализацией заданий лабораторной работы. main необходим для соединения воедино всех файлов
-from struct import pack
 import task1
 import task2
 import task3
@@ -11,6 +10,8 @@ import task8
 import task9
 import task10
 import task11
+import task12
+import task13
 
 #функция вызова скриптов
 def main():
@@ -27,6 +28,8 @@ def main():
         print("9 - имитация работы банкомата")
         print("10 - проверка надежности пароля")
         print("11 - frange генератор")
+        print("12 - get_frames генератор")
+        print("13 - extra_enumerate генератор")
         print("0 - выход")
         print("----------------------------------")
         choice = input("Введите номер задания: ")
@@ -54,9 +57,19 @@ def main():
         elif choice == "10":
             task10.algo()
         elif choice == "11":
-            check = task11.frange(1, 5, 0.1)
-            for x in check:
+            frange = task11.frange(1, 5, 0.1)
+            for x in frange:
                 print(round(x, 1)) #округление сделано для того чтобы не было проблем в выводе: 1,10000001 и т.д...
+        elif choice == "12":
+            signal = list(range(10))
+            frame = task12.get_frames(signal, 4, 0.75)
+            for frames in frame:
+                print(frames)
+        elif choice == "13":
+            x = [1, 3, 4, 2]
+            extr = task13.extra_enumerate(x)
+            for i, elem, cum, frac in extr:
+                print("{}, {}, {}".format(elem, cum, round(frac, 2))) #округление идёт по той же причине, что и в №11
         elif choice == "0":
             break
         else:
