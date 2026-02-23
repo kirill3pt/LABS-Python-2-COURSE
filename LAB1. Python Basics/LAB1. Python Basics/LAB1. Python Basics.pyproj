@@ -25,6 +25,13 @@
     <Compile Include="task1.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="task10.py" />
+    <Compile Include="task11.py" />
+    <Compile Include="task12.py" />
+    <Compile Include="task13.py" />
+    <Compile Include="task14.py" />
+    <Compile Include="task15.py" />
+    <Compile Include="task16.py" />
     <Compile Include="task2.py">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +43,11 @@
     <Compile Include="task4.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="task7.py" />
+    <Compile Include="task8.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="task9.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -44,8 +44,8 @@ def main():
         elif choice == "2":
             arrTRUE = [1, 15, 30, 45, 60]
             arrFALSE = [2, 1, 15, 10, 7]
-            print(task2.increas(arrTRUE))
             print(task2.increas(arrFALSE))
+            print(task2.increas(arrTRUE))
         elif choice == "3":
             task3.numbers()
         elif choice == "4":
@@ -63,7 +63,7 @@ def main():
         elif choice == "10":
             task10.algo()
         elif choice == "11":
-            frange = task11.frange(1, 5, 0.1)
+            frange = task11.frange(2, 10, 0.5)
             for x in frange:
                 print(round(x, 1)) #округление сделано для того чтобы не было проблем в выводе: 1,10000001 и т.д...
         elif choice == "12":
@@ -75,12 +75,12 @@ def main():
             x = [1, 3, 4, 2]
             extr = task13.extra_enumerate(x)
             for i, elem, cum, frac in extr:
-                print("{}, {}, {}".format(elem, cum, round(frac, 2))) #округление идёт по той же причине, что и в №11
+                print("{}, {}, {}, {}".format(i, elem, cum, round(frac, 2))) #округление идёт по той же причине, что и в №11
         elif choice == "14":
             print(task14.get_pages())
         elif choice == "15":
             s = [1.0, 2.0, 3.0, 4.0]
-            print(task15.plot_signal(s))
+            task15.plot_signal(s)
         elif choice == "16": 
             task16.UEFA_Champions_League()
         elif choice == "0":
@@ -88,5 +88,5 @@ def main():
         else:
             print("Неверный выбор :(")
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     main()

@@ -6,6 +6,4 @@
     step = max(1, int(size * (1 - overlap)))
 
     for start in range(0, n - size + 1, step):
-        end = start + size
-        frame = signal[start:end]
-        yield frame
+        yield signal[start : start + size]

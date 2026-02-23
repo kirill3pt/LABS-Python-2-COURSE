@@ -24,10 +24,10 @@
     #вывод
     outputParts = [] #части вывода (например, 5000*1) которые потом будут соединяться в одну строку для вывода
     if request == 0:
-        for nominal, count in cashOut.items():
-            if count > 0:
-                outputParts.append("{}*{}".format(count, nominal)) #соединяем ключ и значение
-                outputString = ' + '.join(outputParts) #объединяем результат предыдущих действий
-        print(outputString)
+        output_parts = [
+            f"{count}*{nominal}" for nominal, count in cashOut.items() if count > 0
+        ]
+        output_string = " + ".join(output_parts)
+        print(output_string)
     if request > 0:
         print("Операция не может быть выполнена!")

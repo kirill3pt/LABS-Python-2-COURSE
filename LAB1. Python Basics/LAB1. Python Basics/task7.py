@@ -8,6 +8,7 @@
         adress if adress.endswith(".com") 
         else adress + ".com" for adress in prom_addresses] #проверяем - добавляем .com если 
                                                            #заканчивается не на .com, иначе - оставляем
+    print("source list: {}".format(addresses))
     print("list: {}".format(final_addresses))
     #prom_addresses - промежуточный список, где адреса проверяются первый раз на www
     #final_addresses - финальный список, где адреса соотв. 1 условию и проверяются на 2
