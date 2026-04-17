@@ -81,11 +81,12 @@ class MainWindow(QMainWindow):
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         for line_number, line in enumerate(lines, start=1):
-            phones = re.findall(PATTERN, line)
+            for match in re.finditer(PATTERN, line):
+                p = match.group()
+                position = match.start() + 1  # позиция в строке (1-based)
 
-            for p in phones:
                 self.list_widget.addItem(
-                    f"Строка: {line_number}: '{p}' : найдено {now}"
+                    f"Строка: {line_number}, позиция: {position}, найдено: {p}"
                 )
 
         size = os.path.getsize(path)
