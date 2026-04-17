@@ -20,15 +20,15 @@ class MainWindow(QMainWindow):
         self.list_widget = QListWidget()
         self.setCentralWidget(self.list_widget)
 
-        # --- статус-бар с 2 полями ---
+        # --- статус-бар ---
         self.status = QStatusBar()
         self.setStatusBar(self.status)
 
         self.status_left = QLabel("Готово")
         self.status_right = QLabel("")
 
-        self.status.addWidget(self.status_left, 3)   # ~60%
-        self.status.addWidget(self.status_right, 2)  # ~40%
+        self.status.addWidget(self.status_left, 3)  
+        self.status.addWidget(self.status_right, 2) 
 
         self.init_menu()
 
@@ -83,7 +83,7 @@ class MainWindow(QMainWindow):
         for line_number, line in enumerate(lines, start=1):
             for match in re.finditer(PATTERN, line):
                 p = match.group()
-                position = match.start() + 1  # позиция в строке (1-based)
+                position = match.start() + 1
 
                 self.list_widget.addItem(
                     f"Строка: {line_number}, позиция: {position}, найдено: {p}"
