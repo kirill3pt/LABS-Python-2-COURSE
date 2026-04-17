@@ -12,8 +12,6 @@ def main():
         print("3 - задание №3")
         print("4 - задание №4")
         print("5 - задание №5")
-        print("6 - задание №6")
-        print("7 - задание №7")
         print("0 - выход")
         print("----------------------------------")
         choice = input("Введите номер задания: ")
@@ -27,10 +25,6 @@ def main():
             StringFormatter.run()
         elif choice == "5":
             GUIstringFormatter.run()
-        elif choice == "6":
-            reorganize.run()
-        elif choice == "7":
-            trackmix.run()
         elif choice == "0":
             break
         else:
