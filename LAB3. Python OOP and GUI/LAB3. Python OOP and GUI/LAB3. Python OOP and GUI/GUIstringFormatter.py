@@ -93,7 +93,6 @@ class Window(QWidget):
         text = self.input.text()
         sf = StringFormatter(text)
 
-        # 1. сначала работа со словами
         if self.cb1.isChecked():
             sf.remove_short(self.spin.value())
 
@@ -101,11 +100,9 @@ class Window(QWidget):
             mode = "len" if self.radio_len.isChecked() else "lex"
             sf.sort_words(mode)
 
-        # 2. потом замена цифр
         if self.cb2.isChecked():
             sf.mask_digits()
 
-        # 3. только в самом конце символы
         if self.cb3.isChecked():
             sf.spaced()
 

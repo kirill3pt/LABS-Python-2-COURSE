@@ -8,6 +8,9 @@ class StringFormatter:
     def __str__(self):
         return self.text
 
+    def _split_words(self):
+        return re.split(r"[,\s]+", self.text)
+
     def remove_short_words(self, n):
         words = self._split_words()
         self.text = " ".join([w for w in words if len(w) >= n])
